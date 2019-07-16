@@ -1,0 +1,21 @@
+.card {
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: $color-white;
+    border-radius: 20px;
+    text-align: center;
+
+    &__btn-edit {
+        background-color: $color-primary;
+        padding: 10px 20px;
+        color: $color-white !important;
+
+        &:hover {
+            background-color: $color-dark-primary;
+        }
+    }
+}
