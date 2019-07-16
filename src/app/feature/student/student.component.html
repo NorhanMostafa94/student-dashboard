@@ -9,7 +9,7 @@
                 <th>Action</th>
             </thead>
             <tbody>
-                <tr *ngFor="let student of data | searchData : query; let i = index" (click)=" trClicked(student.id);
+                <tr *ngFor="let student of data | searchData : query; let i = index" (click)=" stdRowClicked(student.id);
             selectedRow = i" [ngClass]="{'active':selectedRow===i?'red':''}">
                     <td>{{student.id}}</td>
                     <td>{{student.name}}</td>

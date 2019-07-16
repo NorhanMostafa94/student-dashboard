@@ -49,7 +49,7 @@ export class StudentComponent implements OnInit {
     }
   }
 
-  trClicked(id: number) {
+  stdRowClicked(id: number) {
     this.studentService.updateStatus(id);
     this.showStudetDetails = true;
     console.log(this.data);
