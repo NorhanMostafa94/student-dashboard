@@ -23,4 +23,14 @@ export class StudentService {
         const i = this.data.findIndex(std => std.id === student.id);
         this.data[i] = student;
     }
+    updateStatus(id: number) {
+        this.data.map(std => {
+            if (std.id === id) {
+                std.isActive = true;
+            }
+            else {
+                std.isActive = false;
+            }
+        })
+    }
 }

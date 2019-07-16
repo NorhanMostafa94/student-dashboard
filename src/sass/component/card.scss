@@ -7,11 +7,15 @@
     margin-bottom: 20px;
     background-color: $color-white;
     border-radius: 20px;
-    text-align: center;
+    padding: 50px;
 
     &__btn-edit {
         background-color: $color-primary;
         padding: 10px 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 4px;
         color: $color-white !important;
 
         &:hover {

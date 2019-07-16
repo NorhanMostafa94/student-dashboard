@@ -35,6 +35,7 @@ export class StudentItemComponent implements OnInit {
     if (this.editStudentForm.controls.studentId.valid && this.editStudentForm.controls.studentName.valid) {
       this.student.id = this.editStudentForm.controls.studentId.value;
       this.student.name = this.editStudentForm.controls.studentName.value;
+      this.studentService.update(this.student)
       this.modalService.hide(1)
     }
   }

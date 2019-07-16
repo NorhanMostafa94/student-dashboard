@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, Input } from '@angular/core';
 import { FormsModule, FormGroup, Validators, FormControl } from '@angular/forms';
 
 //import Student model and its service
@@ -15,8 +15,11 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 export class StudentComponent implements OnInit {
   data: Student[];
   student: Student;
+  @Input() activeStudent: Student;
+  showStudetDetails: boolean;
   editStudentForm: FormGroup;
   modalRef: BsModalRef;
+  selectedRow: number;
   constructor(private studentService: StudentService, private modalService: BsModalService) { }
 
   ngOnInit() {
@@ -41,8 +44,16 @@ export class StudentComponent implements OnInit {
       this.student = this.studentService.getById(id);
       this.student.id = this.editStudentForm.controls.studentId.value;
       this.student.name = this.editStudentForm.controls.studentName.value;
+      this.studentService.update(this.student)
       this.modalService.hide(1)
     }
+  }
+
+  trClicked(id: number) {
+    this.studentService.updateStatus(id);
+    this.showStudetDetails = true;
+    console.log(this.data);
+    this.activeStudent = this.studentService.getById(id)
   }
 
 }

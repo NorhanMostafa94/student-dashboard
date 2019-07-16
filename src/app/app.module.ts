@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './feature/student/student.component';
 import { StudentItemComponent } from './feature/student/student-item/student-item.component';
 import { DashboardComponent } from './feature/student/dashboard/dashboard.component';
-import { StudentRowComponent } from './feature/student/student-row/student-row.component';
 import { HeaderComponent } from './core/header/header.component';
 
 import { StudentService } from './feature/student/student.service';
@@ -21,7 +20,6 @@ import { FormsModule } from '@angular/forms';
     StudentComponent,
     StudentItemComponent,
     DashboardComponent,
-    StudentRowComponent,
     HeaderComponent,
     SearchPipe
   ],
